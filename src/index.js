@@ -11,12 +11,10 @@ const api_key='AIzaSyCyhUptlFSzLDkI8sevJrFZ-JvQ_6v6Mmo';
 class App extends Component {
 	constructor(props){
 		super(props)
-				var comp = this;
-
-		comp.state={videos:[]};
+		this.state={videos:[]};
 		YTsearch({key:api_key,  term:'surfboard'},(videos)=>{
 			// console.log(data)
-			comp.setState({videos});
+			this.setState({videos});
 		})
 	}
 
